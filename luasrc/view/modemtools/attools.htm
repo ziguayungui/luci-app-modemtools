@@ -49,9 +49,9 @@ local uci = require "luci.model.uci".cursor()
 </head>
 
 <fieldset class="cbi-section" id="cbi-term">
-	<table width="700" border="0">
+	<table border="0">
     <tr>
-		<td width="10%"><div align="left"><%:模块端口 : %></div></td>
+		<td width="10%"><div align="right"><%:模块端口 : %></div></td>
 		<td width="15%">
 			<select style="width:200px" name="usbdevlist" id="devlist">
 				<option value="/dev/ttyUSB0">ttyUSB0</option>
@@ -69,13 +69,12 @@ local uci = require "luci.model.uci".cursor()
 				<option value="/dev/ttyUSB12">ttyUSB12</option>
 			</select>
 		</td>
-		<td width="10%"><div align="left"><%:AT命令 : %></div></td>
-		<td width="15%"><input style="visibility:visible;width: 500px;maxlength="200" type="text" name="atcommand" id="atcommand" class="cbi-input-text"></input></td>
+		<td width="10%"><div align="right"><%:AT命令 : %></div></td>
+		<td width="25%"><input style="visibility:visible;width: 200px;maxlength="200" type="text" name="atcommand" id="atcommand" class="cbi-input-text"></input></td>
 		<td width="10%">
 			<input style="visibility:visible" type="submit" id="sendat" class="cbi-button cbi-button-apply" value="<%:发送%>" onclick="return sendcmd()" />
 			<input style="visibility:visible" type="submit" id="sendclean" class="cbi-button cbi-button-reset" value="<%:清除%>" onclick="return sendclean()" />
 		</td>
-		<td width="47%">&nbsp;</td>
 	</tr>
     </table>
 	<textarea readonly="readonly"  name="atresponse" id="atresponse" rows="50" style="width: 100%;" maxlength="160"></textarea>
