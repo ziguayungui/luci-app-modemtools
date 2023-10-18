@@ -6,7 +6,7 @@ translate = I18N.translate
 function index()
     entry({"admin", "modemtools"}, firstchild(), "ModemTools", 25).dependent=false
     entry({"admin", "modemtools", "send_atcmd"}, call("action_send_atcmd"))
-    entry({"admin", "modemtools", "ATTools"}, template("modemtools/attools"), translate("AT工具"), 98)
+    entry({"admin", "modemtools", "attools"}, template("modemtools/attools"), translate("AT工具"), 98)
 end
 
 function action_send_atcmd()
