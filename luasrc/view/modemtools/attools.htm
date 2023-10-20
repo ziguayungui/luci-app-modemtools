@@ -11,7 +11,7 @@ local uci = require "luci.model.uci".cursor()
 	function sendcmd(event)
 	{
 		var device = document.getElementById("devlist").value;
-		var command = document.getElementById("atcommand").value;
+		var command = document.getElementById("atcommand").value.replace(/\s/g, "").replace(/"/g, '\\"');
 		var atresponse =document.getElementById("atresponse").value;
 		if ( command.length == 0 )
 		{
